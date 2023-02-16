@@ -40,16 +40,30 @@ let position=fruits.indexOf('peas');
 console.log( 'position:',position);
 
 
-const numbers = [1, 2 , 3, 4, 5,8];
-const evenNumber = numbers.find(number => number % 2 === 0);
+const numbers = [1, 2, 3, 4, 5];
+function isEven(number) {
+  return number % 2 === 0;}
+const evenNumber = numbers.find(isEven);
 console.log(evenNumber);
 
 
 
-const num = [1, 2, 3, 4, 5];
-const doubledNumbers = numbers.map(number => number * 2);
+
+function doubleNumber(number) {
+  return number * 2;}
+const doubledNumbers = numbers.map(doubleNumber);
 console.log(doubledNumbers);
 
+
+
+
+const evenNumbers = numbers.filter(number => number % 2 === 0);
+console.log(evenNumbers); 
+
+
+
+numbers.reverse();
+console.log(numbers)
 
 
 
